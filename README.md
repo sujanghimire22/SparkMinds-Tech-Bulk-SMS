@@ -151,7 +151,7 @@ print(r.status_code, r.text)
 
 ## Contact
 
-- **Email:** [enquiry@sparkminds.com.np](mailto\:enquiry@smtech.com.np)
+- **Email:** [enquiry@smtech.com.np](mailto\:enquiry@smtech.com.np)
 - **Website:** [https://www.smtech.com.np](https://www.smtech.com.np)
 - **Phone:** +977-97045150101
 - **Address:** Bharatpur, Chitwan, Nepal
