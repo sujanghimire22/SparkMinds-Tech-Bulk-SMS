@@ -1,4 +1,4 @@
-# SparkMinds SMS API Documentation
+# SparkMinds Tech Bulk SMS API Documentation
 
 SparkMinds Tech provides a robust BULK SMS platform in Nepal, enabling seamless SMS communication across NTC and Ncell networks.
 
