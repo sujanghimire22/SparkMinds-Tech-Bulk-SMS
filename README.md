@@ -618,7 +618,7 @@ curl_close($ch);
 ## Contact
 
 - **Email:** [enquiry@smtech.com.np](mailto\:enquiry@smtech.com.np)
-<strong>Website:</strong> <a href="https://www.smtech.com.np" target="_blank" rel="noopener noreferrer">https://www.smtech.com.np</a>
+- **Website:** <a href="https://www.smtech.com.np" target="_blank" rel="noopener noreferrer">https://www.smtech.com.np</a>
 - **Phone:** +977-97045150101
 - **Address:** Bharatpur, Chitwan, Nepal
 
