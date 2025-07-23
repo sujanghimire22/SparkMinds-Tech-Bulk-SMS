@@ -191,6 +191,163 @@ namespace PostSMS{
     "data": []
 }
 ```
+## SMS API V4 ##
+
+* URL :: https://sms.sparkminds.com.np/sms/v4/send
+* Method: POST
+* Header parameter: auth-token (Your Api Token Value)
+* Url: https://sms.sparkminds.com.np/sms/v4/send
+* Parameter: auth-token,to,text, schedule
+
+
+| Field     | Type   | Description                             |
+| ----------|:------:| -----:                                  |
+| auth-token| string | Token generated from our website.       |
+| to        | string | Comma Separated 10-digit mobile numbers.|
+| text      | string | SMS Message to be sent.                 |
+| schedule  | date time | it should be in 24 hours format like 2024-08-08 17:17:00 |
+
+#### PHP CURL ####
+```
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://sms.sparkminds.com.np/sms/v4/send?to=9704515010&text=This%20is%20test%20message&schedule=2024-08-08%2017%3A17%3A00',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_HTTPHEADER => array(
+    'auth-token: e219042e626220639e484a729dcf045c37e21f04773fcee9a8009dce57ade62e'
+    
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+?>
+```
+
+#### PHP Guzzle ####
+```
+<?php
+$client = new Client();
+$headers = [
+  'auth-token' => 'e219042e626220639e484a729dcf045c37e21f04773fcee9a8009dce57ade62e'
+];
+$request = new Request('POST', 'https://sms.sparkminds.com.np/sms/v4/send?to=9704515010&text=This is test message&schedule=2024-08-08 17:17:00', $headers);
+$res = $client->sendAsync($request)->wait();
+echo $res->getBody();
+?>
+```
+
+#### NodeJs ####
+```
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': 'https://sms.sparkminds.com.np/sms/v4/send?to=9704515010&text=This is test message&schedule=2024-08-08 17:17:00',
+  'headers': {
+    'auth-token': 'e219042e626220639e484a729dcf045c37e21f04773fcee9a8009dce57ade62e'
+  },
+  formData: {
+
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
+```
+
+#### Python ####
+```
+import requests
+
+url = "https://sms.sparkminds.com.np/sms/v4/send?to=9704515010&text=This is test message&schedule=2024-08-08 17:17:00"
+
+payload = {}
+files={}
+headers = {
+  'auth-token': 'e219042e626220639e484a729dcf045c37e21f04773fcee9a8009dce57ade62e'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+print(response.text)
+```
+
+#### Response if succeed
+```
+{
+    "error": false,
+    "message": "1 messages has been queued for delivery.",
+    "data": {
+        "valid": [
+            {
+                "id": "9115_172311669417186",
+                "mobile": "9779704515010",
+                "text": "This is test message",
+                "credit": 1,
+                "network": "ntc",
+                "status": "queued",
+                "shortcode": "AT_Alert"
+            }
+        ],
+        "invalid": []
+    }
+}
+```
+
+#### Response if schedule date is less than current date and time
+```
+{
+    "error": true,
+    "message": "The schedule must be a date after now.",
+    "data": []
+}
+```
+#### Response if auth-token missing
+```
+{
+    "error": true,
+    "message": "Unauthorized",
+    "data": []
+}
+```
+
+#### Response if auth-token missing
+```
+{
+    "error": true,
+    "message": "Not found.",
+    "data": []
+}
+```
+#### Response if to field is missing
+```
+{
+    "error": true,
+    "message": "The to field is required.",
+    "data": []
+}
+```
+
+#### Response if text field is missing
+```
+{
+    "error": true,
+    "message": "The to text is required.",
+    "data": []
+}
+```
 
 
 ### Send SMS to Multiple Numbers ###
