@@ -22,7 +22,7 @@ Typical use cases:
 
 ### API SMS ###
 
-API's give our customers the capacity to integrate SMS into all facets of their business applications, websites, intranets, CRM's, ERP's and other corporate software  providing a real-time messaging capability in existing corporate applications.
+Our APIs enable customers to seamlessly integrate SMS functionality into every aspect of their business systems — including applications, websites, intranets, CRMs, ERPs, and other enterprise software — delivering real-time messaging capabilities within their existing platforms.
 
 * Url: https://sms.sparkminds.com.np/sms/v3/send
 * Parameter: auth_token,to,text
@@ -195,7 +195,7 @@ namespace PostSMS{
 
 ### Send SMS to Multiple Numbers ###
 
-You can now send a single message to multiple recipients or send multiple messages to multiple recipients. The to and text fields are now arrays, allowing for more flexible usage.This API allows you to send one message to multiple numbers or different messages to different numbers by passing an array of phone numbers in the to field and corresponding messages in the text field.
+You can now send a single message to multiple recipients or send different messages to multiple recipients using this API. The **to** and **text** fields accept arrays, offering greater flexibility. By passing an array of phone numbers in the **to** field and corresponding messages in the **text** field, you can efficiently send one message to many users or tailor individual messages for each recipient.
 
 
 * Url: https://sms.sparkminds.com.np/sms/v4/send-user
@@ -491,7 +491,7 @@ GET request is sent to the URL provided with following arguments:
 
 #### Response 
 
-You need to build your logic on how to respond to the incoming request and send text response of maximum 160 characters with response code. Incase of any other response code, default reply will be sent to user as SMS reply.
+You need to implement logic to handle incoming requests and respond with a text message (maximum 160 characters) along with a response code. If any response code other than the expected one is returned, a default SMS reply will be automatically sent to the user.
 
 
 ```
@@ -506,25 +506,9 @@ You need to build your logic on how to respond to the incoming request and send 
 
 
 
-### SEE Result
-
-```
-Type see<space>SYMBOL NUMBER  and send it to 31003.
-
-```
-
-### NEB Result
-
-```
-Type neb<space>SYMBOL NUMBER  and send it to 31003.
-
-```
-
-
-
 ### SMS Campaign ###
 
-We can create individual campaigns to generate leads for your products and services. This helps you gather data on your prospective customers, who are most likely to buy your product/service.
+You can create individual campaigns to generate leads for your products and services. This allows you to collect valuable data on potential customers who are most likely to be interested in what you offer.
 
 * Voting
 * Poll
@@ -533,7 +517,7 @@ We can create individual campaigns to generate leads for your products and servi
 
 ### SMS Voting ###
 
-SMS Poll is the easiest and fastest way to find out what your audience is thinking. With a simple text message, you can launch a interactive mobile poll that is both engaging for your audience and rewarding for your business.
+SMS Polls offer a quick and effective way to gauge your audience’s opinions. With a simple text message, you can launch an interactive mobile poll that keeps your audience engaged while delivering valuable insights for your business.
 
 ## Interactive SMS
 
@@ -634,7 +618,7 @@ curl_close($ch);
 ## Contact
 
 - **Email:** [enquiry@smtech.com.np](mailto\:enquiry@smtech.com.np)
-- **Website:** [https://www.smtech.com.np](https://www.smtech.com.np)
+<strong>Website:</strong> <a href="https://www.smtech.com.np" target="_blank" rel="noopener noreferrer">https://www.smtech.com.np</a>
 - **Phone:** +977-97045150101
 - **Address:** Bharatpur, Chitwan, Nepal
 
