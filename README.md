@@ -9,6 +9,7 @@ SparkMinds Tech provides a robust BULK SMS service in Nepal, enabling seamless S
 - SMS Campaigns
 - Interactive Messaging
 
+
 ## 📦 BULK SMS
 
 Bulk Messaging allows mass dissemination of SMS directly to mobile numbers from your application or dashboard.
@@ -17,9 +18,11 @@ Typical use cases:
 - Marketing Campaigns
 - Reminders & Promotions
 
+
+
 ### API SMS ###
 
-APIâ€™s give our customers the capacity to integrate SMS into all facets of their business â€“ applications, websites, intranets, CRMâ€™s, ERPâ€™s and other corporate software â€“ providing a real-time messaging capability in existing corporate applications.
+API's give our customers the capacity to integrate SMS into all facets of their business applications, websites, intranets, CRM's, ERP's and other corporate software  providing a real-time messaging capability in existing corporate applications.
 
 * Url: https://sms.sparkminds.com.np/sms/v3/send
 * Parameter: auth_token,to,text
@@ -396,11 +399,11 @@ curl_close($ch);
 ```
 {
 
-    â€œavailable_creditâ€: xxx,
+    available_credit: xxx,
     "total_sms_sent" : xxx,
-    â€œlast_transaction_dateâ€ : xxx,
+    last_transaction_date : xxx,
     "last_transaction_date_sms_sent" : xxx
-    â€œresponse_codeâ€: 202
+    response_code: 202
 
 }
 
@@ -423,8 +426,8 @@ curl_close($ch);
 ```
 {
 
-    â€œavailable_creditâ€: xxx,
-    â€œresponse_codeâ€: 200
+    available_credit: xxx,
+    response_code: 200
 
 }
 
